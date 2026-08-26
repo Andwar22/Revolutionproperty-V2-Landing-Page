@@ -6,11 +6,16 @@
             --main-padding-x: 2rem;
             --section-padding-y: 6rem;
         }
+
+        .title {
+            font-size: var(--cr-font-size-5xl);
+        }
     /* #endregion ====================== */
     
     /* #region ====== NAVBAR ====== */
         #navbar {
-            .nav-brand {
+            .nav-brand,
+            .logo-nav-mobile {
                 svg {
                     height: 42px;
                 }
@@ -22,15 +27,75 @@
 
     /* #region ====== MAIN HEADER ====== */
         #mainHeader {
-            .hero-footer {
-                padding: 3rem var(--main-padding-x);
+            .text {
+                padding-top: calc(80px + 2rem);
+                
+                .top {
+                    font-size: var(--cr-font-size);
+                }
+                p:nth-of-type(1) {
+                    font-size: 3.5rem;
+                }
+                p:nth-of-type(2) {
+                    max-width: 75%;
+                    font-size: var(--cr-font-size-lg);
+                    margin-bottom: 2rem;
+                }
+                .cta-hero {
+                    gap: .75rem;
+                    transform: scale(1);
+                }
+                .cr-primary {
+                    display: flex;
+                }
             }
-            .video-controls {
-                flex-direction: row;
+            
+            .image {
+                background-size: contain;
+                background-position: right bottom;
+            }
+
+            .running-logo {
+                --card-w: 45px;
             }
         }
     /* #endregion ====================== */
     
+    /* #region ====== PROBLEM ====== */
+        #problem {
+            .head-sect {
+                span {
+                    display: block;
+                }
+                /* .image {
+                    display: block;
+                    position: absolute;
+                    top: calc(var(--section-padding-y) * 2);
+                    right: 0;
+                    height: 200px;
+                    aspect-ratio: 1;
+                    mask: linear-gradient(to right, transparent, #000 20%, #000 80%, transparent);
+                } */
+            }
+
+            .problem-wrap {
+                grid-template-columns: repeat(2, 1fr);
+                margin-top: 3rem;
+            }
+            .problem {
+                display: flex;
+                align-items: flex-start;
+                gap: 1rem;
+                border-radius: 1rem;
+
+                span {
+                    margin-top: .2rem;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    /* #endregion ====================== */
+
 }
 
 /* ############## DESKTOP UP (1025px) ############## */
@@ -46,7 +111,7 @@
         #navbar {
             .navbar-wrap {
                 gap: 2rem;
-                padding: 1rem calc(var(--main-padding-x) / 2);
+                padding: 1rem 0;
             }
             .nav-menu {
                 flex: 1;
@@ -118,7 +183,6 @@
                     }
                 }
             }
-
             
             .cr-dropdown.theme .cr-drop-toggle {
                 color: var(--static-white);
@@ -200,7 +264,106 @@
             }
         }
     /* #endregion ====================== */
-    
+   
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>  INDEX  <<<<<<<<<<<<<<<<<<<<<<<<< */
+
+    /* #region ====== MAIN HEADER ====== */
+        #mainHeader {
+            &::before {
+                background: radial-gradient(circle at 90% 80%, hsl(from var(--primary) h s l / .35), var(--surface-0) 50%);
+            }
+            
+            .hero {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 70px;
+            }
+
+            .text {
+                max-width: 48%;
+                padding: 0;
+                
+                p:nth-of-type(1) {
+                    font-size: 4rem;
+                    margin-bottom: 2rem;
+                }
+                p:nth-of-type(2) {
+                    max-width: 100%;
+                }
+                .cta-hero {
+                    gap: 1rem;
+                    margin-top: 2.5rem;
+                }
+            }
+
+            .image {
+                height: 100%;
+            }
+
+            .wrap-logo {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+            .running-logo {
+                padding: 1rem;
+
+                &:hover .track {
+                    -webkit-animation-play-state: paused;
+                            animation-play-state: paused;
+                }
+            }
+
+            .polka {
+                bottom: 15%;
+                left: 0;
+                top: auto;
+                right: auto;
+            }
+        }
+    /* #endregion ====================== */
+
+    /* #region ====== PROBLEM ====== */
+        #problem {
+            .problem-wrap {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.25rem;
+            }
+            .problem {
+                flex-direction: column;
+                align-items: center;
+                gap: 1.5rem;
+                text-align: center;
+                padding: 1.5rem 1rem;
+
+                span {
+                    display: grid;
+                    place-items: center;
+                    min-width: 50px;
+                    width: 50px;
+                    aspect-ratio: 1;
+                    color: var(--sc-300);
+                    margin-top: 0;
+                    background: linear-gradient(30deg, var(--pr-500), var(--pr-600));
+                    border-radius: .75rem;
+                }
+                p:first-child {
+                    color: var(--primary);
+                    font-size: var(--cr-font-size-lg);
+                    font-weight: 600;
+                    line-height: 1.4;
+                    text-transform: capitalize;
+                    margin-bottom: .5rem;
+                }
+                p:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    /* #endregion ====================== */
+
 }
 
 /* ############## LARGE DESKTOP / MONITOR UP (1440px) ############## */
@@ -222,13 +385,6 @@
     /* #region ====== MAIN HEADER ====== */
         #mainHeader {
             max-height: 1080px;
-
-            .hero-footer {
-                max-width: var(--content-max);
-                left: 50%;
-                transform: translateX(-50%);
-                padding-inline: 0;
-            }
         }
     /* #endregion ====================== */
 
