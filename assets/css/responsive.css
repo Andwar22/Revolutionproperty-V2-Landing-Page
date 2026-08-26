@@ -1,0 +1,264 @@
+
+/* ############## TABLET UP (768px) ############## */
+@media (width >= 48em) {
+    /* #region ====== GENERAL ====== */
+        :root {
+            --main-padding-x: 2rem;
+            --section-padding-y: 6rem;
+        }
+    /* #endregion ====================== */
+    
+    /* #region ====== NAVBAR ====== */
+        #navbar {
+            .nav-brand {
+                svg {
+                    height: 42px;
+                }
+            }
+        }
+    /* #endregion ====================== */
+
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>  INDEX  <<<<<<<<<<<<<<<<<<<<<<<<< */
+
+    /* #region ====== MAIN HEADER ====== */
+        #mainHeader {
+            .hero-footer {
+                padding: 3rem var(--main-padding-x);
+            }
+            .video-controls {
+                flex-direction: row;
+            }
+        }
+    /* #endregion ====================== */
+    
+}
+
+/* ############## DESKTOP UP (1025px) ############## */
+@media (width >= 64.0625em) {
+  /* #region ====== GENERAL ====== */
+        :root {
+            --content-max: 960px;
+            --main-padding-x: 3rem;
+        }
+    /* #endregion ====================== */
+    
+    /* #region ====== NAVBAR ====== */
+        #navbar {
+            .navbar-wrap {
+                gap: 2rem;
+                padding: 1rem calc(var(--main-padding-x) / 2);
+            }
+            .nav-menu {
+                flex: 1;
+                position: unset;
+                inset: unset;
+                display: unset;
+                flex-direction: unset;
+                gap: 0;
+                padding: 0;
+                background-color: transparent;
+                opacity: 1;
+                pointer-events: all;            
+                container-type: inline-size;
+                container-name: navmenu-container;
+
+                &::before,
+                &::after {
+                    display: none;
+                }
+            }
+            .nav-menu ul {
+                flex: unset;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .nav-menu ul li {
+                width: -webkit-fit-content;
+                width: -moz-fit-content;
+                width: fit-content;
+                
+                .nav-link {
+                    position: relative;
+                    display: inline-block;
+                    width: -webkit-fit-content;
+                    width: -moz-fit-content;
+                    width: fit-content;
+                    color: var(--putih);
+                    text-transform: capitalize;
+                    line-height: 1;
+                    vertical-align: middle;
+                    white-space: nowrap;
+                    padding: .5rem 1rem;
+                    background-color: transparent;
+                    border-radius: 3rem;
+
+                    &:is(:hover, :active, .active) {
+                        color: var(--secondary) !important;
+                        background: transparent;
+                    }
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 50%;
+                        bottom: -2px;
+                        width: 50%;
+                        height: 2px;
+                        background-color: var(--secondary);
+                        border-radius: 3rem;
+                        transform: translateX(-50%) scaleX(0);
+                        transform-origin: center left;
+                        transition: var(--anim);
+                    }
+                    &.active::before {
+                        transform: translateX(-50%) scaleX(1);
+                    }
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+
+            
+            .cr-dropdown.theme .cr-drop-toggle {
+                color: var(--static-white);
+                font-size: 1.25rem;
+            }
+            .cr-dropdown.theme .cr-drop-item {
+                display: flex;
+                align-items: center;
+                padding: .35rem .75rem;
+            }
+            .cr-dropdown.theme .cr-drop-item.active {
+                color: var(--static-white);
+                background-color: var(--primary);
+            }
+            .cr-dropdown.theme .cr-drop-menu {
+                right: 0;
+                left: auto;
+                min-width: auto;
+            }
+
+            .open-menu,
+            .close-menu,
+            .logo-nav-mobile,
+            .cta-mobile {
+                display: none;
+            }
+            .theme-switch {
+                display: inline-block;
+            }
+        }
+    /* #endregion ====================== */
+    
+    /* #region ====== FOOTER ====== */
+        footer {
+            .top {
+                grid-template-columns: 1.5fr 1fr 1fr;
+                grid-template-rows: repeat(3, -webkit-max-content);
+                grid-template-rows: repeat(3, max-content);
+                gap: 5%;
+            }
+            .profile {
+                flex-direction: row;
+                gap: 2rem;
+
+                p:nth-of-type(2) {
+                    font-size: .85rem;
+                }
+            }
+            .logo {
+                min-width: 100px;
+                width: 100px;
+                padding-top: .5rem;
+            }
+            .social a:hover {
+                color: var(--secondary);
+            }
+
+            .mark {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 1rem;
+
+                .social {
+                    justify-content: flex-start;
+                    font-size: 1.5rem;
+                    margin-bottom: 0;
+                }
+                b {
+                    display: inline-block;
+                    position: relative;
+
+                    &::before {
+                        content: '-';
+                        display: inline-block;
+                        margin: 0 .5rem;
+                    }
+                }
+            }
+        }
+    /* #endregion ====================== */
+    
+}
+
+/* ############## LARGE DESKTOP / MONITOR UP (1440px) ############## */
+@media (width >= 90em) {
+    /* #region ====== GENERAL ====== */
+        :root {
+            --max-page: 1920px;
+            --content-max: 1280px;
+            --main-padding-x: 4rem;
+            --section-padding-y: 7rem;
+        }
+        .desc {
+            line-height: 1.75;
+        }
+    /* #endregion ====================== */
+
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>  INDEX  <<<<<<<<<<<<<<<<<<<<<<<<< */
+
+    /* #region ====== MAIN HEADER ====== */
+        #mainHeader {
+            max-height: 1080px;
+
+            .hero-footer {
+                max-width: var(--content-max);
+                left: 50%;
+                transform: translateX(-50%);
+                padding-inline: 0;
+            }
+        }
+    /* #endregion ====================== */
+
+}
+
+/* ############## TV / ULTRAWIDE UP (1800px) ############## */
+@media (width >= 112.5em) {
+    /* #region ====== GENERAL ====== */
+        :root {
+            --content-max: 1480px;
+            --main-padding-x: 8rem;
+            --section-padding-y: 7.5rem;
+        }
+    /* #endregion ====================== */
+
+    /* >>>>>>>>>>>>>>>>>>>>>>>>>  INDEX  <<<<<<<<<<<<<<<<<<<<<<<<< */
+
+    /* #region ====== MAIN HEADER ====== */
+        #mainHeader {
+            min-height: 820px;
+        }
+    /* #endregion ====================== */
+
+}
+
+/* ############## SUPER ULTRAWIDE (2200px) ############## */
+@media (width >= 137.5em) {
+    /* #region ====== GENERAL ====== */
+        :root {
+            --content-max: 1600px;
+        }
+    /* #endregion ====================== */
+}

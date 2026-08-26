@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Page Not Found - Triyana Resort Carangsari</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="preload" href="/assets/lib/crumbs.css" as="style">
+        <link rel="stylesheet" href="/assets/css/main.css">
+        <link rel="stylesheet" href="/assets/css/responsive.css">
+        <link rel="stylesheet" href="/assets/icon/crumbsicon.css">
+
+        <style>
+            body {
+                min-height: 100vh;
+                margin: 0;
+                display: grid;
+                place-items: center;
+                overflow: hidden;
+                background:
+                    radial-gradient(600px 300px at 15% 10%, hsl(from var(--sc-300) h s l / 0.35), transparent),
+                    radial-gradient(500px 260px at 85% 85%, hsl(from var(--pr-800) h s l / 0.2), transparent),
+                    var(--main-bg);
+            }
+
+            .not-found-wrap {
+                width: min(960px, calc(100% - 2.5rem));
+                padding: clamp(1.25rem, 2vw, 2rem);
+            }
+
+            .not-found-card {
+                position: relative;
+                padding: clamp(2rem, 5vw, 4rem);
+                border-radius: 1.5rem;
+                background: hsl(from var(--putih) h s l / 0.7);
+                border: 1px solid hsl(from var(--pr-900) h s l / 0.15);
+                box-shadow: 0 20px 55px hsl(from var(--pr-900) h s l / 0.15);
+                overflow: hidden;
+                backdrop-filter: blur(6px);
+            }
+
+            .not-found-card::before,
+            .not-found-card::after {
+                content: "";
+                position: absolute;
+                border-radius: 50%;
+                z-index: 0;
+            }
+
+            .not-found-card::before {
+                width: 240px;
+                aspect-ratio: 1;
+                top: -90px;
+                right: -85px;
+                background: hsl(from var(--secondary) h s l / 0.45);
+            }
+
+            .not-found-card::after {
+                width: 200px;
+                aspect-ratio: 1;
+                bottom: -70px;
+                left: -80px;
+                background: hsl(from var(--pr-800) h s l / 0.2);
+            }
+
+            .not-found-content {
+                position: relative;
+                z-index: 1;
+            }
+
+            .brand {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.75rem;
+                margin-bottom: 1.5rem;
+                color: var(--primary);
+                text-decoration: none;
+            }
+
+            .brand svg {
+                width: 38px;
+                height: 38px;
+            }
+
+            .brand div {
+                display: flex;
+                flex-direction: column;
+                text-transform: uppercase;
+                line-height: 1;
+            }
+
+            .brand span:first-child {
+                font-family: var(--font-serif);
+                font-size: 1.4rem;
+                font-weight: 700;
+            }
+
+            .brand span:last-child {
+                font-size: 0.65rem;
+                letter-spacing: 0.08em;
+            }
+
+            .code {
+                margin: 0;
+                color: var(--secondary);
+                font-weight: 700;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 0.35rem 0 0.85rem;
+                color: var(--primary);
+                font-family: var(--font-serif);
+                font-size: clamp(2rem, 4vw, 3.8rem);
+                line-height: 1.05;
+            }
+
+            .desc {
+                max-width: 48ch;
+                color: var(--grey);
+                font-size: 1rem;
+                line-height: 1.65;
+                margin: 0 0 1.75rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.75rem;
+                margin-bottom: 1.25rem;
+            }
+
+            .hint {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                color: var(--grey);
+                font-size: 0.95rem;
+                margin: 0;
+            }
+
+            .hint i {
+                color: var(--secondary);
+                font-size: 1.2rem;
+            }
+
+            @media (width >= 768px) {
+                .not-found-card {
+                    border-radius: 2rem;
+                }
+
+                .actions .cr-btn {
+                    min-width: 170px;
+                    justify-content: center;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main class="not-found-wrap">
+            <div class="cr-dropdown theme" aria-label="Theme mode" title="Theme mode">
+                <button id="crDropdownThemeToggle" class="cr-btn cr-drop-toggle cr-icon" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="crDropdownThemeMenu">
+                    <i class="ci-computer-settings"></i>
+                </button>
+                <ul id="crDropdownThemeMenu" class="cr-drop-menu" aria-labelledby="crDropdownThemeToggle" aria-hidden="true">
+                    <li>
+                        <button class="cr-drop-item" type="button" data-theme-value="light">
+                            <i class="ci-sun-03"></i>
+                            <span>Light Mode</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="cr-drop-item" type="button" data-theme-value="dark">
+                            <i class="ci-moon-2"></i>
+                            <span>Dark Mode</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="cr-drop-item" type="button" data-theme-value="system">
+                            <i class="ci-computer-settings"></i>
+                            <span>System</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <section class="not-found-card" aria-labelledby="not-found-title">
+                <div class="not-found-content">
+                    <a href="/index.html" class="brand" aria-label="Back to Triyana homepage">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1817 1817" fill="currentColor" aria-hidden="true">
+                            <path d="M187 1023c0,0 -49,-200 414,-211 0,0 2,0 4,0 -164,309 -314,854 128,974 -480,-198 -134,-843 -79,-976 46,-3 117,-11 196,-33 43,-5 123,-11 229,0 0,0 7,2 7,5 0,3 12,50 62,51 0,0 0,-35 -14,-53 7,-13 35,-7 61,-33 0,0 -47,-27 -97,14 0,0 -8,4 -41,2 -23,-1 -91,-6 -164,1 58,-19 118,-46 176,-82l0 0 0 0c1,-1 2,-1 3,-2 20,-7 104,32 154,-35 -32,8 -51,-9 -94,-4 21,-20 9,-54 22,-79 0,0 -73,22 -72,100 -54,38 -190,115 -422,128 -45,4 -505,-18 -478,234 1,9 7,6 5,-1z"></path>
+                        </svg>
+                        <div>
+                            <span>triyana</span>
+                            <span>resort carangsari</span>
+                        </div>
+                    </a>
+
+                    <p class="code">Error 404</p>
+                    <h1 id="not-found-title">The page you are looking for cannot be found.</h1>
+                    <p class="desc">The link may be outdated, moved, or typed incorrectly. You can return to the homepage or jump directly to reservation to continue planning your stay.</p>
+
+                    <div class="actions">
+                        <a href="/index.html" class="cr-btn cr-primary cr-lg">Back to Homepage</a>
+                        <a href="/pages/reservation.html" class="cr-btn cr-secondary cr-lg">Go to Reservation</a>
+                    </div>
+
+                    <p class="hint">
+                        <i class="ci-navigation-02"></i>
+                        Need help? Visit our contact page from the main menu.
+                    </p>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Triyana Resort Carangsari</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">  
+        <!-- preload crumbs -->
+        <link rel="preload" href="/assets/lib/crumbs.css" as="style">
+        <!-- main css -->
+        <link rel="stylesheet" href="/assets/css/main.css">
+        <link rel="stylesheet" href="/assets/css/responsive.css">
+        <!-- icon -->
+        <link rel="stylesheet" href="/assets/icon/crumbsiconhuge.css">
+        <!-- prevent theme flash -->
+        <script>
+            (function(){
+                var t = localStorage.getItem('cr:theme');
+                if (t) document.documentElement.setAttribute('data-theme', t);
+            })();
+        </script>
+    </head>
+    <body>
+        <nav id="navbar">
+            <div class="navbar-wrap">
+                <input type="checkbox" id="nav-toggle" name="toggle navbar">
+            
+                <div class="nav-brand">
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 143 119">   
+                            <g>
+                                <path fill="currentcolor" stroke="currentcolor" stroke-width="2" d="M143 0l-74 119 -35 -57 -22 0 0 -15 47 0c10,0 18,-8 18,-18l0 -15 -77 0 0 -15 91 0 0 30c0,18 -15,32 -32,32l-8 0 18 29 57 -91 17 0z"></path>
+                            </g>
+                        </svg>
+                        <div>
+                            <span>revolution property</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div id="menus" class="nav-menu">
+                    <div class="logo-nav-mobile">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 143 119">   
+                            <g>
+                                <path fill="currentcolor" stroke="currentcolor" stroke-width="2" d="M143 0l-74 119 -35 -57 -22 0 0 -15 47 0c10,0 18,-8 18,-18l0 -15 -77 0 0 -15 91 0 0 30c0,18 -15,32 -32,32l-8 0 18 29 57 -91 17 0z"></path>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <label for="nav-toggle" class="close-menu">
+                        <i class="ci-cancel-01"></i>
+                    </label>
+
+                    <ul>                        
+                        <li>
+                            <a href="#about" class="nav-link">Welcome</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="cta-mobile">
+                        <p>Stay where Bali feels beautifully unhurried.</p>
+                        <p>Wake up to quiet nature, warm hospitality, and a private resort escape made for peaceful days.</p>
+                        <a href="/pages/reservation.html" class="cr-btn cr-secondary">reserve now</a>
+                    </div>
+                </div>
+
+                <div class="theme-switch">
+                    <div class="cr-dropdown theme" aria-label="Theme mode" title="Theme mode">
+                        <button id="crDropdownThemeToggle" class="cr-btn cr-drop-toggle cr-icon" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="crDropdownThemeMenu">
+                            <i class="ci-computer-settings"></i>
+                        </button>
+                        <ul id="crDropdownThemeMenu" class="cr-drop-menu" aria-labelledby="crDropdownThemeToggle" aria-hidden="true">
+                            <li>
+                                <button class="cr-drop-item" type="button" data-theme-value="light">
+                                    <i class="ci-sun-03"></i>
+                                    <span>Light Mode</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="cr-drop-item" type="button" data-theme-value="dark">
+                                    <i class="ci-moon-02"></i>
+                                    <span>Dark Mode</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="cr-drop-item" type="button" data-theme-value="system">
+                                    <i class="ci-computer-settings"></i>
+                                    <span>System</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <label for="nav-toggle" class="open-menu">
+                    <i class="ci-menu-03"></i>
+                </label>
+            </div>
+            
+            <div class="nav-layer trans"></div>
+        </nav>
+        
+        <header id="mainHeader">            
+            <div class="hero">
+                <div class="text">
+                    <p>solusi mudah <br><span class="underline">punya</span> properti</p>
+                    <p>Saatnya punya Properti di Bali yang bantu tingkatin penjualan, bikin tamu lebih gampang booking, dan buka peluang income lebih besar.</p>
+                    <div>
+                        <button class="cr-btn cr-primary-outline">miliki sekarang</button>
+                        <button class="cr-btn cr-secondary">konsultasi gratis <i class="ci ci-arrow-right-02"></i></button>
+                    </div>
+                </div>
+                <div class="image"></div>
+                <div class="wrap-logo">
+                    <div class="running-logo" aria-label="Running Company">
+                        <div class="track">
+                            <div>
+                                <img src="https://rv-affiliate.azureedge.net/triyana-group/landing-page/logo/triyana-logo-full-white.png" alt="company" loading="lazy" decoding="async">
+                            </div>
+                            <div>
+                                <img src="https://rv-affiliate.azureedge.net/triyana-group/landing-page/logo/aid-logo-white.png" alt="company" loading="lazy" decoding="async">
+                            </div>
+                            <div>
+                                <img src="https://rv-affiliate.azureedge.net/triyana-group/landing-page/logo/rv-logo-white.png" alt="company" loading="lazy" decoding="async">
+                            </div>
+                            <div>
+                                <img src="https://rv-affiliate.azureedge.net/triyana-group/landing-page/logo/realty-logo-white.png" alt="company" loading="lazy" decoding="async">
+                            </div>
+                            <div>
+                                <img src="https://rv-affiliate.azureedge.net/triyana-group/landing-page/logo/mireva-logo-white.png" alt="company" loading="lazy" decoding="async">
+                            </div>
+                            <div>
+                                <img src="https://rv-affiliate.azureedge.net/triyana-group/landing-page/logo/miyamor-logo-white.png" alt="company" loading="lazy" decoding="async">
+                            </div>
+                            <div>
+                                <img src="https://rv-affiliate.azureedge.net/triyana-group/landing-page/logo/balrini-logo-white.png" alt="company" loading="lazy" decoding="async">
+                            </div>
+                            <div>
+                                <img src="https://rv-affiliate.azureedge.net/triyana-group/landing-page/logo/glamping-logo-white.png" alt="company" loading="lazy" decoding="async">
+                            </div>
+                            <div>
+                                <img src="https://rv-affiliate.azureedge.net/triyana-group/landing-page/logo/carangsari-logo-white.png" alt="company" loading="lazy" decoding="async">
+                            </div>
+                            <div>
+                                <img src="https://rv-affiliate.azureedge.net/triyana-group/landing-page/logo/jazz-logo-white.png" alt="company" loading="lazy" decoding="async">
+                            </div>
+
+                            <!-- for smooth loop -->
+                            <div>
+                                <img src="https://rv-affiliate.azureedge.net/triyana-group/landing-page/logo/triyana-logo-full-white.png" alt="company" aria-hidden="true">
+                            </div>
+                            <div>
+                                <img src="https://rv-affiliate.azureedge.net/triyana-group/landing-page/logo/aid-logo-white.png" alt="company" aria-hidden="true">
+                            </div>
+                            <div>
+                                <img src="https://rv-affiliate.azureedge.net/triyana-group/landing-page/logo/rv-logo-white.png" alt="company" aria-hidden="true">
+                            </div>
+                            <div>
+                                <img src="https://rv-affiliate.azureedge.net/triyana-group/landing-page/logo/realty-logo-white.png" alt="company" aria-hidden="true">
+                            </div>
+                            <div>
+                                <img src="https://rv-affiliate.azureedge.net/triyana-group/landing-page/logo/mireva-logo-white.png" alt="company" aria-hidden="true">
+                            </div>
+                            <div>
+                                <img src="https://rv-affiliate.azureedge.net/triyana-group/landing-page/logo/miyamor-logo-white.png" alt="company" aria-hidden="true">
+                            </div>
+                            <div>
+                                <img src="https://rv-affiliate.azureedge.net/triyana-group/landing-page/logo/balrini-logo-white.png" alt="company" aria-hidden="true">
+                            </div>
+                            <div>
+                                <img src="https://rv-affiliate.azureedge.net/triyana-group/landing-page/logo/glamping-logo-white.png" alt="company" aria-hidden="true">
+                            </div>
+                            <div>
+                                <img src="https://rv-affiliate.azureedge.net/triyana-group/landing-page/logo/carangsari-logo-white.png" alt="company" aria-hidden="true">
+                            </div>
+                            <div>
+                                <img src="https://rv-affiliate.azureedge.net/triyana-group/landing-page/logo/jazz-logo-white.png" alt="company" aria-hidden="true">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="problem1">
+            <div class="head-sect">
+                <div>
+                    <p class="subtitle">Realita saat ini</p>
+                    <p class="title">Kenali Realita Yang<br>Banyak Dirasakan</p>
+                    <p class="desc">Banyak alasan yang membuat punya properti terasa sulit anda tidak sendirian.</p>
+                </div>
+                <!-- <div>
+                    <img src="/assets/images/img-rvp2-problem-01.png">
+                </div> -->
+            </div>
+            <div class="problem-wrap">
+                <div>
+                    <span><i class="ci ci-chart-up"></i></span>
+                    <p>harga property terus naik</p>
+                    <p>tabungan terasa tidak cukup mengejar</p>
+                </div>
+                <div>
+                    <span><i class="ci ci-chart-up"></i></span>
+                    <p>KPR Berbunga Beban Jangka Panjang </p>
+                    <p>20 Tahun? Cicilan panjang hidup terasa terkunci</p>
+                </div>
+                <div>
+                    <span><i class="ci ci-chart-up"></i></span>
+                    <p>Proses Ribet syarat Berlibet</p>
+                    <p>BI Checking, DP Besar, persyaratan yang membuat banyak menyerah.</p>
+                </div>
+                <div>
+                    <span><i class="ci ci-chart-up"></i></span>
+                    <p>Pengeluaran Besar, Keuangan Tidak Stabil</p>
+                    <p>Setiap bulan pengeluaran besar, tabungan sulit bertahan</p>
+                </div>
+                <div>
+                    <span><i class="ci ci-chart-up"></i></span>
+                    <p>Rasa Khawatir Masa Depan</p>
+                    <p>Takut tidak sempat punya aset untuk diri sendiri dan keluarga.</p>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        <footer>
+            <div class="footer-wrap">
+                <div class="top">
+                    <div class="profile">
+                        <div class="logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 143 119">   
+                                <g>
+                                    <path fill="currentcolor" stroke="currentcolor" stroke-width="2" d="M143 0l-74 119 -35 -57 -22 0 0 -15 47 0c10,0 18,-8 18,-18l0 -15 -77 0 0 -15 91 0 0 30c0,18 -15,32 -32,32l-8 0 18 29 57 -91 17 0z"></path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="txt">
+                            <p>Revolution Property</p>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas voluptatibus deserunt quisquam vero est neque nesciunt corrupti nemo totam harum repellat ipsam facere, delectus impedit, error ducimus quae vel ex rerum aut? Eos, quos reiciendis.</p>
+                        </div>
+                    </div>
+
+                    <div class="address">
+                        <p class="sub">Address</p>
+                        <p>Jl. Tukad Ayung XIX, Carangsari, Petang, Kabupaten Badung, Bali 80353</p>
+                        <ul>
+                            <li><a href="https://api.whatsapp.com/send/?phone=6281339498851&text=Hello+Triyana+Resort+Carangsari%2C%0A%0AI%E2%80%99m+interested+in+checking+room+availability+at+Triyana+Resort+Carangsari.+Could+you+please+let+me+know+which+rooms+are+currently+available%3F%0A%0AThank+you%21&type=phone_number&app_absent=0" target="_blank"><i class="ci-whatsapp"></i> 081-33949-8851</a></li>
+                            <li><a href="mailto:info.triyanaresort@gmail.com?Subject=Info%20Seputar%20Triyana%20Resort%20Carangsari" target="_blank"><i class="ci-mail-01"></i> info.triyanaresort@gmail.com</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="navigate">
+                        <p class="sub">Navigasi</p>
+                        <ul>
+                            <li><a href="#about"><i class="ci-arrow-right-double"></i>welcome</a></li>
+                            <li><a href="#rooms"><i class="ci-arrow-right-double"></i>rooms</a></li>
+                            <li><a href="#facility"><i class="ci-arrow-right-double"></i>offers</a></li>
+                            <li><a href="#activity"><i class="ci-arrow-right-double"></i>activities</a></li>
+                            <li><a href="#gallery"><i class="ci-arrow-right-double"></i>gallery</a></li>
+                            <li><a href="/pages/about.html"><i class="ci-arrow-right-double"></i>about us</a></li>
+                            <li><a href="/pages/contact.html"><i class="ci-arrow-right-double"></i>contact</a></li>
+                            <li><a href="/pages/reservation.html"><i class="ci-arrow-right-double"></i>book direct</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mark">
+                    <div class="social">
+                        <a href="https://www.instagram.com/triyanaresortcarangsari" target="_blank"><i class="ci-instagram"></i></a>
+                        <a href="https://www.facebook.com/triyanaresortcarangsari" target="_blank"><i class="ci-facebook-01"></i></a>
+                        <a href="https://www.youtube.com/@triyanaresortcarangsari9474" target="_blank"><i class="ci-youtube"></i></a>
+                    </div>
+                    <p class="copyright">Copyright &copy; <span id="year"></span> Triyana Resort Carangsari<b>All Rights Reserved</b>.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Back To Top -->
+        <button onclick="backToTop()" id="bttBtn">
+            <i class="ci-arrow-up-01"></i>
+        </button>
+        
+        <!-- Jquery -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <!-- GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollToPlugin.min.js"></script>
+        <!-- main js -->
+        <script src="/assets/js/main.js"></script>
+        <!-- dark mode -->
+        <script src="/assets/js/darkmode.js"></script>
+        <!-- crumbs -->
+        <script src="/assets/lib/crumbs.js"></script>
+    </body>
+</html>
