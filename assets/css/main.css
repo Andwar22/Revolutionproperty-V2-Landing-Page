@@ -1,5 +1,5 @@
 @layer variable, library, crumbs-override;
-@import "./assets/lib/crumbs.css" layer(library);
+@import "../lib/crumbs.css" layer(library);
 
 /* #region ====== VARIABLE (Layer) ====== */
     @layer variable {
@@ -185,7 +185,7 @@
             left: 0;
             width: 120%;
             min-height: 50px;
-            background-image: url(./assets/images/etc/underline.png);
+            background-image: url(../images/etc/underline.png);
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center top;
@@ -780,7 +780,7 @@
         .image {
             flex: 1;
             width: 100%;
-            background-image: url(./assets/images/main-hero.png);
+            background-image: url(../images/main-hero.png);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center top;
