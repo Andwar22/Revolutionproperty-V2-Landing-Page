@@ -1,5 +1,5 @@
 @layer variable, library, crumbs-override;
-@import "/assets/lib/crumbs.css" layer(library);
+@import "./assets/lib/crumbs.css" layer(library);
 
 /* #region ====== VARIABLE (Layer) ====== */
     @layer variable {
