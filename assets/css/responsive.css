@@ -78,20 +78,24 @@
                 } */
             }
 
-            .problem-wrap {
-                grid-template-columns: repeat(2, 1fr);
-                margin-top: 3rem;
-            }
             .problem {
                 display: flex;
-                align-items: flex-start;
+                align-items: center;
                 gap: 1rem;
                 border-radius: 1rem;
 
                 span {
-                    margin-top: .2rem;
                     margin-bottom: 0;
                 }
+            }
+        }
+    /* #endregion ====================== */
+
+    /* #region ====== REASON ====== */
+        #reason {
+            .reason-wrap {
+                grid-template-columns: 1fr 1fr;
+                gap: 1.25rem;
             }
         }
     /* #endregion ====================== */
@@ -328,34 +332,32 @@
     /* #region ====== PROBLEM ====== */
         #problem {
             .problem-wrap {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 1.25rem;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 1.5rem;
             }
             .problem {
                 flex-direction: column;
                 align-items: center;
-                gap: 1.5rem;
+                gap: 1rem;
                 text-align: center;
                 padding: 1.5rem 1rem;
 
                 span {
-                    display: grid;
-                    place-items: center;
-                    min-width: 50px;
-                    width: 50px;
-                    aspect-ratio: 1;
-                    color: var(--sc-300);
-                    margin-top: 0;
-                    background: linear-gradient(30deg, var(--pr-500), var(--pr-600));
-                    border-radius: .75rem;
+                    min-width: 70px;
+                    width: 70px;
+                    padding: 1rem;
                 }
                 p:first-child {
-                    color: var(--primary);
-                    font-size: var(--cr-font-size-lg);
-                    font-weight: 600;
-                    line-height: 1.4;
-                    text-transform: capitalize;
-                    margin-bottom: .5rem;
+                    margin-bottom: 1.25rem;
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 30%;
+                        margin-top: 1rem;
+                        margin-inline: auto;
+                        border-bottom: 3px solid var(--secondary);
+                    }
                 }
                 p:last-child {
                     margin-bottom: 0;
@@ -363,6 +365,17 @@
             }
         }
     /* #endregion ====================== */
+
+    /* #region ====== REASON ====== */
+        #reason {
+            .wrapper {
+                display: grid;
+                grid-template-columns: 40% auto;
+                gap: 2rem;
+            }
+        }
+    /* #endregion ====================== */
+
 
 }
 
