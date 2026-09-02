@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   await initLenis();
   initNavbarMobile();
   initBackToTop();
+  initNavbarOnScroll();
   initSmoothAnchors();
   initAnimations();
 });
@@ -170,6 +171,34 @@ function initBackToTop() {
   window.backToTop = function () {
     smoothScrollTo(0);
   };
+}
+
+// NAVBAR SCROLL BEHAVIOR (GLOBAL - NON GSAP)
+// ==========================================================
+function initNavbarOnScroll() {
+  const navbar = document.getElementById("navbar");
+
+  if (!navbar) return;
+
+  let lastScroll = 0;
+  const delta = 10;
+
+  // Mengambil threshold 80% dari viewport
+  const getThreshold = () => window.innerHeight * 0.8;
+  let threshold = getThreshold();
+
+  window.addEventListener("resize", () => {
+    threshold = getThreshold();
+  });
+
+  window.addEventListener("scroll", () => {
+    const scroll = window.scrollY;
+
+    if (Math.abs(lastScroll - scroll) > delta) {
+      navbar.style.top = scroll > lastScroll && scroll > threshold ? "-95px" : "0";
+      lastScroll = scroll;
+    }
+  }, { passive: true });
 }
 
 // SMOOTH ANCHOR SCROLL

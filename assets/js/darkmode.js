@@ -11,7 +11,7 @@ function initThemeToggle() {
   const html = document.documentElement;
   const THEME_KEY = "cr:theme";
   const VALID_THEMES = ["light", "dark", "system"];
-  const ICONS = { light: "ci-sun-03", dark: "ci-moon-02", system: "ci-computer-settings" };
+  const ICONS = { light: "ci ci-sun-03", dark: "ci ci-moon-02", system: "ci ci-system-update-02" };
 
   function getStoredTheme() {
     const stored = localStorage.getItem(THEME_KEY);

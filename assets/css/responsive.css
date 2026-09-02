@@ -64,23 +64,25 @@
     /* #region ====== PROBLEM ====== */
         #problem {
             .problem-wrap {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1.5rem;
+                grid-template-columns: 0.85fr 1.15fr;
             }
+            .feature {
+                padding: 1.75rem;
 
-            .problem {
-                display: flex;
-                align-items: flex-start;
-                gap: 1.25rem;
-                padding: 1.75rem 1.5rem;
-                border-radius: 1rem;
-
-                span:not(.card-num) {
-                    margin-bottom: 0;
+                .feature-icon {
+                    margin-bottom: 2rem;
                 }
-
-                &:nth-child(5) {
-                    grid-column: span 2;
+                h3 {
+                    font-size: var(--cr-font-size-2xl);
+                    margin-bottom: 1rem;
+                }
+            }
+            .problem-row {
+                .row-title {
+                    font-size: var(--cr-font-size-lg);
+                }
+                .row-desc {
+                    font-size: var(--cr-font-size);
                 }
             }
         }
@@ -95,6 +97,19 @@
             .reason {
                 padding: 1.5rem;
                 gap: 1.25rem;
+            }
+        }
+    /* #endregion ====================== */
+
+    /* #region ====== STRATEGY ====== */
+        #strategy {
+            .difference {
+                grid-template-columns: 1fr auto 1fr;
+                align-items: center;
+            }
+
+            .the-way {
+                min-height: 100%;
             }
         }
     /* #endregion ====================== */
@@ -186,24 +201,9 @@
                     }
                 }
             }
-            
+
             .cr-dropdown.theme .cr-drop-toggle {
-                color: var(--static-white);
-                font-size: 1.25rem;
-            }
-            .cr-dropdown.theme .cr-drop-item {
-                display: flex;
-                align-items: center;
-                padding: .35rem .75rem;
-            }
-            .cr-dropdown.theme .cr-drop-item.active {
-                color: var(--static-white);
-                background-color: var(--primary);
-            }
-            .cr-dropdown.theme .cr-drop-menu {
-                right: 0;
-                left: auto;
-                min-width: auto;
+                color: var(--text-primary);
             }
 
             .open-menu,
@@ -331,36 +331,14 @@
     /* #region ====== PROBLEM ====== */
         #problem {
             .problem-wrap {
-                grid-template-columns: repeat(6, 1fr);
-                gap: 1.75rem;
+                grid-template-columns: 0.75fr 1.25fr;
+                gap: 3rem;
             }
-            .problem {
-                flex-direction: column;
-                align-items: flex-start;
-                text-align: left;
-                padding: 2.25rem 1.75rem 1.75rem;
+            .feature {
+                padding: 2.5rem;
 
-                &:nth-child(1), &:nth-child(2), &:nth-child(3) {
-                    grid-column: span 2;
-                }
-                &:nth-child(4) {
-                    grid-column: 2 / span 2;
-                }
-                &:nth-child(5) {
-                    grid-column: 4 / span 2;
-                }
-
-                span:not(.card-num) {
-                    min-width: 65px;
-                    width: 65px;
-                    padding: 0.85rem;
-                    margin-bottom: 1.5rem;
-                }
-                p:first-of-type {
-                    margin-bottom: 0.75rem;
-                }
-                p:last-of-type {
-                    margin-bottom: 0;
+                h3 {
+                    font-size: var(--cr-font-size-3xl);
                 }
             }
         }
