@@ -31,7 +31,7 @@
                 padding-top: calc(80px + 2rem);
                 
                 .top {
-                    font-size: var(--cr-font-size);
+                    font-size: var(--cr-font-size-sm);
                 }
                 p:nth-of-type(1) {
                     font-size: 3.5rem;
@@ -65,6 +65,7 @@
         #problem {
             .problem-wrap {
                 grid-template-columns: 0.85fr 1.15fr;
+                margin-top: 4rem;
             }
             .feature {
                 padding: 1.75rem;
@@ -77,42 +78,94 @@
                     margin-bottom: 1rem;
                 }
             }
-            .problem-row {
-                .row-title {
-                    font-size: var(--cr-font-size-lg);
+        }
+    /* #endregion ====================== */
+
+    /* #region ====== CONSEQUENCE ====== */
+        #consequence {
+            .head-sect {
+                margin-bottom: 4rem;
+            }
+            .consequence-wrap {
+                width: fit-content;
+                padding-left: 5.5rem;
+                margin-inline: auto;
+                margin-top: 4rem;
+
+                .item::before {
+                    left: -3.75rem;
                 }
-                .row-desc {
-                    font-size: var(--cr-font-size);
+                .dot {
+                    left: -5.5rem;
+                    width: 3.5rem;;
+                    height: 3.5rem;
                 }
             }
         }
     /* #endregion ====================== */
 
-    /* #region ====== REASON ====== */
-        #reason {
-            .reason-wrap {
-                grid-template-columns: 1fr 1fr;
-                gap: 1.5rem;
+    /* #region ====== COMPARISON ====== */
+        #comparison {
+            .diff-table {
+                margin-top: 4rem;
             }
-            .reason {
-                padding: 1.5rem;
-                gap: 1.25rem;
+            .th {
+                font-size: var(--cr-font-size-xl);
+                padding: 1.5rem 4rem;
+            }            
+            .th.old {
+                text-align: right;
             }
-        }
-    /* #endregion ====================== */
+            .th.new {
+                text-align: left;
+            }
+            .vs {
+                width: 3.25rem;
+                height: 3.25rem;
+                font-size: var(--cr-font-size-2xl);
+            }
 
-    /* #region ====== STRATEGY ====== */
-        #strategy {
-            .difference {
-                grid-template-columns: 1fr auto 1fr;
+            .diff-row {
+                grid-template-columns: 1fr 125px 1fr;
+            }
+            .cell {
+                justify-content: flex-end;
+                gap: 1rem;
+            }
+            .cell.old {
+                padding: 1.5rem 1rem;
+                flex-direction: row;
+            }
+            .cell.new {
+                justify-content: flex-start;
+                padding: 1.5rem 1rem;
+            }
+
+            .icon {
+                display: flex;
                 align-items: center;
+                justify-content: center;
+                width: 26px;
+                height: 26px;
+                border-radius:50%;
+            }
+            .icon.x {
+                color: var(--red);
+                background: hsl(from var(--red) h s l / .15);
+            }
+            .icon.check {
+                color: var(--primary);
+                background: hsl(from var(--primary) h s l / .15);
             }
 
-            .the-way {
-                min-height: 100%;
+            .quote {
+                font-size: var(--cr-font-size-xl);
+                max-width: 50ch;
+                margin-inline: auto;
             }
         }
     /* #endregion ====================== */
+
 
 }
 
@@ -341,16 +394,61 @@
                     font-size: var(--cr-font-size-3xl);
                 }
             }
+            .problem-row {
+                .row-title {
+                    font-size: var(--cr-font-size-xl);
+                }
+                .row-desc {
+                    font-size: var(--cr-font-size);
+                }
+            }
         }
     /* #endregion ====================== */
 
-    /* #region ====== REASON ====== */
-        #reason {
-            .wrapper {
-                display: grid;
-                grid-template-columns: 38% auto;
-                gap: 3rem;
-                align-items: center;
+    /* #region ====== CONSEQUENCE ====== */
+        #consequence {
+            .head-sect {
+                .title {
+                    max-width: 650px;
+                    margin-inline: auto;
+                }
+                .desc {
+                    max-width: 70%;
+                    margin-inline: auto;
+                }
+            }
+            .consequence-wrap {
+                p:nth-of-type(1) {
+                    font-size: var(--cr-font-size-xl);
+                }
+                p:nth-of-type(2) {
+                    font-size: var(--cr-font-size);
+                }
+            }
+        }
+    /* #endregion ====================== */
+
+    /* #region ====== COMPARISON ====== */
+        #comparison {
+            .title span:not(.focus) {
+                display: block;
+            }
+            .th {
+                padding: 1.5rem 5rem;
+            }  
+            .vs {
+                width: 3.5rem;
+                height: 3.5rem;
+                font-size: var(--cr-font-size-3xl);
+            }
+            .diff-row {
+                grid-template-columns: 1fr 150px 1fr;
+            }
+            .cell.old {
+                padding: 1.75rem 2rem;
+            }
+            .cell.new {
+                padding: 1.75rem 2rem;
             }
         }
     /* #endregion ====================== */
