@@ -3,8 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Triyana Resort Carangsari</title>
-        <link rel="icon" type="image/x-icon" href="./favicon.ico">
+        <title>Revolution Property</title>
+        <!-- favicon -->
+        <link rel="icon" type="image/x-icon" href="https://rv-affiliate.azureedge.net/web-replika/favicon.ico">
         <!-- fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,6 +24,10 @@
                 if (t) document.documentElement.setAttribute('data-theme', t);
             })();
         </script>
+        <!-- flickity -->
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+        <!-- glightbox -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
     </head>
     <body>
         <nav id="navbar">
@@ -57,19 +62,19 @@
 
                     <ul>                        
                         <li>
-                            <a href="#about" class="nav-link">Welcome</a>
+                            <a href="" class="nav-link">Beranda</a>
                         </li>
                         <li>
-                            <a href="#about" class="nav-link">Welcome</a>
+                            <a href="#about" class="nav-link">Tentang Kami</a>
                         </li>
                         <li>
-                            <a href="#about" class="nav-link">Welcome</a>
+                            <a href="#about" class="nav-link">Properti</a>
                         </li>
                         <li>
-                            <a href="#about" class="nav-link">Welcome</a>
+                            <a href="#about" class="nav-link">Cara Kerja</a>
                         </li>
                         <li>
-                            <a href="#about" class="nav-link">Welcome</a>
+                            <a href="#about" class="nav-link">FAQ</a>
                         </li>
                     </ul>
                     
@@ -463,14 +468,288 @@
             </div>
         </section>
             
-        <section id="strategy">
-            <div class="wrapper">
-                <div class="head-sect">
-                    <p class="title">masalahnya bukan karena <br>tidak mampu memiliki properti</p>
-                    <p class="desc">Selama ini kita hanya mengenal satu cara untuk memilikinya.</p>
+        <section id="solution">
+            <div class="wrapper-solution">
+                <div class="solution-text">
+                    <p class="title">Hadir solusi baru untuk <span class="focus">memiliki</span> properti</p>
+                    <p class="desc">Revolution Property menghadirkan alternatif kepemilikan properti yang memungkinkan lebih banyak orang mendapatkan akses terhadap aset properti tanpa harus memulai dari beban kepemilikan konvensional.</p>
+                    <a href="" class="cr-btn cr-secondary cr-lg">konsultasi gratis <i class="ci ci-arrow-right-02"></i></a>
+                </div>
+
+                <div class="solution-grid">
+                    <div class="item">
+                        <div class="icon">
+                            <i class="ci ci-lock-key"></i>
+                        </div>
+                        <div>
+                            <div class="item-title">Akses</div>
+                            <div class="item-desc">Dapat akses ke berbagai pilihan properti terbaik.</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="icon">
+                            <i class="ci ci-heart-check"></i>
+                        </div>
+                        <div>
+                            <div class="item-title">Kepemilikan</div>
+                            <div class="item-desc">Miliki properti dengan cara yang lebih mudah dan terstruktur.</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="icon">
+                            <i class="ci ci-building-03"></i>
+                        </div>
+                        <div>
+                            <div class="item-title">Aset</div>
+                            <div class="item-desc">Bangun aset properti bernilai untuk masa depan Anda.</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="icon">
+                            <i class="ci ci-love-korean-finger"></i>
+                        </div>
+                        <div>
+                            <div class="item-title">Lifestyle</div>
+                            <div class="item-desc">Nikmati hidup yang lebih berkualitas bersama orang tercinta.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrapper-flow">
+                <div class="flow-text">
+                    <p class="title"><span class="focus">Bagaimana</span> cara kerjanya?</p>
+                    <p class="desc">Empat langkah sederhana menuju kepemilikan properti impian Anda.</p>
+                </div>
+
+                <div class="flow">
+                    <div class="step">
+                        <div class="icon-wrap">
+                            <i class="ci ci-alien-02"></i>
+                            <div class="badge">01</div>
+                        </div>
+                        <div>
+                            <p>Pilih Program</p>
+                            <p>Sesuaikan dengan kebutuhan dan kemampuan finansial Anda.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="icon-wrap">
+                            <i class="ci ci-alien-02"></i>
+                            <div class="badge">02</div>
+                        </div>
+                        <div>
+                            <p>Pilih Aset</p>
+                            <p>Pilih properti yang tersedia dalam ekosistem RV Property.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="icon-wrap">
+                            <i class="ci ci-alien-02"></i>
+                            <div class="badge">03</div>
+                        </div>
+                        <div>
+                            <p>Mulai Memiliki</p>
+                            <p>Dapatkan hak kepemilikan sesuai program yang dipilih.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="icon-wrap">
+                            <i class="ci ci-alien-02"></i>
+                            <div class="badge">04</div>
+                        </div>
+                        <div>
+                            <p>Nikmati Aset</p>
+                            <p>Gunakan, kembangkan, atau manfaatkan aset sesuai ketentuan program.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <section id="property">
+            <div class="wrapper">
+                <div class="head-sect">
+                    <p class="title">Pilih <span class="focus">properti</span> yang sesuai dengan tujuanmu</p>
+                    <p class="desc">Beragam pilihan aset properti dalam ekosistem Revolution Property, tersebar di berbagai lokasi terbaik di Bali.</p>
+                </div>
+
+                <div class="carousel carousel-props" data-aos="fade-up" data-aos-delay="100" data-flickity='{"wrapAround": true, "cellAlign": "center", "autoPlay": 4000, "pauseAutoPlayOnHover": false, "pageDots": true, "prevNextButtons": true}'>
+                    <div class="carousel-cell">
+                        <div class="property-item">
+                            <img src="https://picsum.photos/seed/rv1/600/450">
+                            <div class="prop-info">
+                                <p>Triyana Resort Carangsari</p>
+                                <p><i class="ci ci-map-pinpoint-02"></i> Badung, Bali</p>
+                                <p>Resort alam dengan konsep glamour camping dan natural villa di desa bersejarah, dekat destinasi wisata alam.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="property-item">
+                            <img src="https://picsum.photos/seed/rv1/600/450">
+                            <div class="prop-info">
+                                <p>Triyana Resort Carangsari</p>
+                                <p><i class="ci ci-map-pinpoint-02"></i> Badung, Bali</p>
+                                <p>Resort alam dengan konsep glamour camping dan natural villa di desa bersejarah, dekat destinasi wisata alam.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="property-item">
+                            <img src="https://picsum.photos/seed/rv1/600/450">
+                            <div class="prop-info">
+                                <p>Triyana Resort Carangsari</p>
+                                <p><i class="ci ci-map-pinpoint-02"></i> Badung, Bali</p>
+                                <p>Resort alam dengan konsep glamour camping dan natural villa di desa bersejarah, dekat destinasi wisata alam.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="property-item">
+                            <img src="https://picsum.photos/seed/rv1/600/450">
+                            <div class="prop-info">
+                                <p>Triyana Resort Carangsari</p>
+                                <p><i class="ci ci-map-pinpoint-02"></i> Badung, Bali</p>
+                                <p>Resort alam dengan konsep glamour camping dan natural villa di desa bersejarah, dekat destinasi wisata alam.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="property-item">
+                            <img src="https://picsum.photos/seed/rv1/600/450">
+                            <div class="prop-info">
+                                <p>Triyana Resort Carangsari</p>
+                                <p><i class="ci ci-map-pinpoint-02"></i> Badung, Bali</p>
+                                <p>Resort alam dengan konsep glamour camping dan natural villa di desa bersejarah, dekat destinasi wisata alam.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="property-item">
+                            <img src="https://picsum.photos/seed/rv1/600/450">
+                            <div class="prop-info">
+                                <p>Triyana Resort Carangsari</p>
+                                <p><i class="ci ci-map-pinpoint-02"></i> Badung, Bali</p>
+                                <p>Resort alam dengan konsep glamour camping dan natural villa di desa bersejarah, dekat destinasi wisata alam.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="property-item">
+                            <img src="https://picsum.photos/seed/rv1/600/450">
+                            <div class="prop-info">
+                                <p>Triyana Resort Carangsari</p>
+                                <p><i class="ci ci-map-pinpoint-02"></i> Badung, Bali</p>
+                                <p>Resort alam dengan konsep glamour camping dan natural villa di desa bersejarah, dekat destinasi wisata alam.</p>
+                            </div>
+                        </div>
+                    </div>                    
+
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="wrapper">
+                <div class="head-sect">
+                    <p class="title">Sebelum konsultasi, ini yang <span class="focus">perlu kamu tahu</span></p>
+                    <p class="desc">Beberapa pertanyaan yang paling sering ditanyakan sebelum memulai program bersama Revolution Property.</p>
+                    <a href="" class="cr-btn cr-secondary cr-lg">konsultasi gratis <i class="ci ci-arrow-right-02"></i></a>
+                </div>
+                
+                <div class="faq-list" id="faqList">
+                    <div class="faq-item">
+                        <button class="faq-q">
+                            <span>Bagaimana Revolution Property membantu saya punya properti di Bali?</span>
+                            <span class="plus"></span>
+                        </button>
+                        <div class="faq-a">
+                            <p>Kami menghadirkan skema kepemilikan bersama (share property) yang memungkinkan Anda memiliki akses ke aset properti tanpa harus menanggung beban kepemilikan konvensional seperti DP besar dan KPR jangka panjang.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">
+                            <span>Apa yang dilakukan setelah daftar?</span>
+                            <span class="plus"></span>
+                        </button>
+                        <div class="faq-a">
+                            <p>Setelah mendaftar, tim kami akan menghubungi Anda untuk sesi konsultasi gratis, membantu memilih program dan aset yang sesuai dengan kebutuhan serta kemampuan finansial Anda.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">
+                            <span>Berapa lama program berlangsung?</span>
+                            <span class="plus"></span>
+                        </button>
+                        <div class="faq-a">
+                            <p>Durasi program bervariasi tergantung jenis aset dan skema yang dipilih, umumnya berkisar antara beberapa tahun hingga durasi yang bisa disesuaikan dengan tujuan investasi Anda.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">
+                            <span>Skema pembayaran apa saja yang tersedia?</span>
+                            <span class="plus"></span>
+                        </button>
+                        <div class="faq-a">
+                            <p>Tersedia beberapa opsi pembayaran, mulai dari sekali bayar hingga skema bertahap, disesuaikan dengan program dan aset properti yang Anda pilih.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">
+                            <span>Siapa saja yang bisa melakukan pengajuan?</span>
+                            <span class="plus"></span>
+                        </button>
+                        <div class="faq-a">
+                            <p>Program ini terbuka untuk WNI maupun WNA yang memenuhi persyaratan administratif dasar, tanpa perlu riwayat kredit atau BI checking seperti pengajuan KPR konvensional.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">
+                            <span>Bagaimana cara upgrade aset?</span>
+                            <span class="plus"></span>
+                        </button>
+                        <div class="faq-a">
+                            <p>Anda dapat mengajukan upgrade porsi kepemilikan atau berpindah ke aset lain dalam ekosistem Revolution Property sesuai ketentuan program yang berlaku.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <div class="wrapper">
+                <div class="head-sect">
+                    <p class="title">Jadi bagian dari  <span class="focus">Revolution Property</span></p>
+                    <p class="desc">Sebagian dokumentasi kegiatan dan pencapaian kami bersama para mitra dan klien.</p>
+                </div>
+
+                <div class="gallery-layout">
+                    <div class="gallery-track">
+                        <a href="https://rv-affiliate.azureedge.net/carangsari/landingpage/img-gall-building-01.webp" class="glightbox gallery-card" data-title="ini judulnya" data-description="jKunjungan langsung ke lokasi properti mitra" data-width="auto" data-height="600px">
+                            <img src="https://rv-affiliate.azureedge.net/carangsari/landingpage/img-gall-building-01.webp" alt="image" loading="lazy" />
+                        </a>
+                        
+                        <a href="https://rv-affiliate.azureedge.net/carangsari/landingpage/img-gall-building-01.webp" class="glightbox gallery-card" data-title="ini judulnya" data-description="jKunjungan langsung ke lokasi properti mitra" data-width="auto" data-height="600px">
+                            <img src="https://rv-affiliate.azureedge.net/carangsari/landingpage/img-gall-building-01.webp" alt="image" loading="lazy" />
+                        </a>
+                        <a href="https://rv-affiliate.azureedge.net/carangsari/landingpage/img-gall-building-01.webp" class="glightbox gallery-card" data-title="ini judulnya" data-description="jKunjungan langsung ke lokasi properti mitra" data-width="auto" data-height="600px">
+                            <img src="https://rv-affiliate.azureedge.net/carangsari/landingpage/img-gall-building-01.webp" alt="image" loading="lazy" />
+                        </a>
+                        <a href="https://rv-affiliate.azureedge.net/carangsari/landingpage/img-gall-building-01.webp" class="glightbox gallery-card" data-title="ini judulnya" data-description="jKunjungan langsung ke lokasi properti mitra" data-width="auto" data-height="600px">
+                            <img src="https://rv-affiliate.azureedge.net/carangsari/landingpage/img-gall-building-01.webp" alt="image" loading="lazy" />
+                        </a>
+                        <a href="https://rv-affiliate.azureedge.net/carangsari/landingpage/img-gall-building-01.webp" class="glightbox gallery-card" data-title="ini judulnya" data-description="jKunjungan langsung ke lokasi properti mitra" data-width="auto" data-height="600px">
+                            <img src="https://rv-affiliate.azureedge.net/carangsari/landingpage/img-gall-building-01.webp" alt="image" loading="lazy" />
+                        </a>
+                        <a href="https://rv-affiliate.azureedge.net/carangsari/landingpage/img-gall-building-01.webp" class="glightbox gallery-card" data-title="ini judulnya" data-description="jKunjungan langsung ke lokasi properti mitra" data-width="auto" data-height="600px">
+                            <img src="https://rv-affiliate.azureedge.net/carangsari/landingpage/img-gall-building-01.webp" alt="image" loading="lazy" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         
         
         <footer>
@@ -483,11 +762,9 @@
                                     <path fill="currentcolor" stroke="currentcolor" stroke-width="2" d="M143 0l-74 119 -35 -57 -22 0 0 -15 47 0c10,0 18,-8 18,-18l0 -15 -77 0 0 -15 91 0 0 30c0,18 -15,32 -32,32l-8 0 18 29 57 -91 17 0z"></path>
                                 </g>
                             </svg>
+                            <span>Revolution Property</span>
                         </div>
-                        <div class="txt">
-                            <p>Revolution Property</p>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas voluptatibus deserunt quisquam vero est neque nesciunt corrupti nemo totam harum repellat ipsam facere, delectus impedit, error ducimus quae vel ex rerum aut? Eos, quos reiciendis.</p>
-                        </div>
+                        <p class="txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas voluptatibus deserunt quisquam vero est neque nesciunt corrupti nemo totam harum repellat ipsam facere, delectus impedit, error ducimus quae vel ex rerum aut? Eos, quos reiciendis.</p>
                     </div>
 
                     <div class="address">
@@ -502,15 +779,18 @@
                     <div class="navigate">
                         <p class="sub">Navigasi</p>
                         <ul>
-                            <li><a href="#about"><i class="ci ci-arrow-right-double"></i>welcome</a></li>
-                            <li><a href="#rooms"><i class="ci ci-arrow-right-double"></i>rooms</a></li>
-                            <li><a href="#facility"><i class="ci ci-arrow-right-double"></i>offers</a></li>
-                            <li><a href="#activity"><i class="ci ci-arrow-right-double"></i>activities</a></li>
-                            <li><a href="#gallery"><i class="ci ci-arrow-right-double"></i>gallery</a></li>
-                            <li><a href="./pages/about.html"><i class="ci ci-arrow-right-double"></i>about us</a></li>
-                            <li><a href="./pages/contact.html"><i class="ci ci-arrow-right-double"></i>contact</a></li>
-                            <li><a href="./pages/reservation.html"><i class="ci ci-arrow-right-double"></i>book direct</a></li>
+                            <li><a href="#about"><i class="ci ci-arrow-right-double"></i>Beranda</a></li>
+                            <li><a href="#rooms"><i class="ci ci-arrow-right-double"></i>tentang kami</a></li>
+                            <li><a href="#facility"><i class="ci ci-arrow-right-double"></i>properti</a></li>
+                            <li><a href="#activity"><i class="ci ci-arrow-right-double"></i>cara kerja</a></li>
+                            <li><a href="#gallery"><i class="ci ci-arrow-right-double"></i>FAQ</a></li>
                         </ul>
+                    </div>
+
+                    <div class="cta-footer">
+                        <p class="sub">Siap mulai?</p>
+                        <p>Konsultasikan tujuan properti Anda bersama tim kami, tanpa biaya.</p>
+                        <a href="" class="cr-btn cr-secondary">konsultasi gratis <i class="ci ci-arrow-right-02"></i></a>
                     </div>
                 </div>
 
@@ -520,7 +800,7 @@
                         <a href="https://www.facebook.com/triyanaresortcarangsari" target="_blank"><i class="ci ci-facebook-01"></i></a>
                         <a href="https://www.youtube.com/@triyanaresortcarangsari9474" target="_blank"><i class="ci ci-youtube"></i></a>
                     </div>
-                    <p class="copyright">Copyright &copy; <span id="year"></span> Triyana Resort Carangsari<b>All Rights Reserved</b>.</p>
+                    <p class="copyright">Copyright &copy; <span id="year"></span> Triyana Resort Carangsari<b>All Rights Reserved.</b></p>
                 </div>
             </div>
         </footer>
@@ -542,5 +822,14 @@
         <script src="./assets/js/darkmode.js"></script>
         <!-- crumbs -->
         <script src="./assets/lib/crumbs.js"></script>
+        <!-- Flickity -->
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <!-- glightbox -->
+        <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+        <script type="text/javascript">
+            const lightbox = GLightbox({ 
+                // loop: true
+            });
+        </script>
     </body>
 </html>

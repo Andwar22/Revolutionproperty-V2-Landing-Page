@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   initNavbarOnScroll();
   initSmoothAnchors();
   initAnimations();
+  initFaqAcc()
 });
 
 // LENIS SMOOTH SCROLL
@@ -259,6 +260,26 @@ function initNavbarMobile() {
   document
     .querySelectorAll(".nav-menu a")
     .forEach(link => link.addEventListener("click", closeNav));
+}
+
+// FAQ ACCORDION
+// ==========================================================
+function initFaqAcc() {
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const btn = item.querySelector('.faq-q');
+    const ans = item.querySelector('.faq-a');
+    btn.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        ans.style.maxHeight = ans.scrollHeight + 'px';
+      }
+    });
+  });
 }
 
 // GET YEAR (NON GSAP)

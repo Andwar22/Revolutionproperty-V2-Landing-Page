@@ -23,6 +23,42 @@
         }
     /* #endregion ====================== */
 
+    /* #region ====== FOOTER ====== */
+        footer {
+            .top {
+                grid-template-columns: 1fr .5fr 1fr;
+                grid-template-rows: repeat(2, -webkit-max-content);
+                grid-template-rows: repeat(2, max-content);
+
+                .profile {
+                    grid-column: span 3;
+                }
+            }
+            .mark {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 1rem;
+
+                .social {
+                    justify-content: flex-start;
+                    font-size: 1.5rem;
+                    margin-bottom: 0;
+                }
+                b {
+                    display: inline-block;
+                    position: relative;
+
+                    &::before {
+                        content: '-';
+                        display: inline-block;
+                        margin: 0 .5rem;
+                    }
+                }
+            }
+        }
+    /* #endregion ====================== */
+
     /* >>>>>>>>>>>>>>>>>>>>>>>>>  INDEX  <<<<<<<<<<<<<<<<<<<<<<<<< */
 
     /* #region ====== MAIN HEADER ====== */
@@ -65,7 +101,6 @@
         #problem {
             .problem-wrap {
                 grid-template-columns: 0.85fr 1.15fr;
-                margin-top: 4rem;
             }
             .feature {
                 padding: 1.75rem;
@@ -83,9 +118,6 @@
 
     /* #region ====== CONSEQUENCE ====== */
         #consequence {
-            .head-sect {
-                margin-bottom: 4rem;
-            }
             .consequence-wrap {
                 width: fit-content;
                 padding-left: 5.5rem;
@@ -99,6 +131,7 @@
                     left: -5.5rem;
                     width: 3.5rem;;
                     height: 3.5rem;
+                    font-size: var(--cr-font-size-3xl);
                 }
             }
         }
@@ -106,9 +139,6 @@
 
     /* #region ====== COMPARISON ====== */
         #comparison {
-            .diff-table {
-                margin-top: 4rem;
-            }
             .th {
                 font-size: var(--cr-font-size-xl);
                 padding: 1.5rem 4rem;
@@ -166,6 +196,86 @@
         }
     /* #endregion ====================== */
 
+    /* #region ====== SOLUTION & FLOW ====== */
+        #solution {   
+            .wrapper-solution {         
+                .solution-grid {
+                    grid-template-columns: 1fr 1fr;
+                    gap: 1rem;
+                }
+                .item {
+                    flex-direction: column;
+                    padding: 1.5rem;
+                    border: 1px solid hsl(from var(--sc-500) h s l / .65);
+                }
+                .item:first-child {
+                    border-top-width: 1px;
+                }
+            }
+
+            .wrapper-flow {
+                .flow {
+                    display: grid;
+                    grid-template-columns: repeat(4,1fr);
+                    gap: 1.5rem;
+                    align-items: start;
+                    padding-left: 0;
+
+                    .step {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        text-align: center;
+                        padding-bottom: 0;
+                    }
+                    .step::before {
+                        display: none;
+                    }
+                    .step::after {
+                        position: absolute;
+                        content: "";
+                        top: 1.5rem;
+                        left: 50%;
+                        width: 100%;
+                        height: 0;
+                        border-top: 2px dashed var(--border);
+                    }
+                    .step:last-child::after {
+                        display: none;
+                    }
+                    .icon-wrap {
+                        position: relative;
+                        top: unset;
+                        left: unset;
+                        width: 3.5rem;
+                        height: 3.5rem;
+                        margin-bottom: 1.5rem;
+                    }
+                }
+            }
+        }
+    /* #endregion ====================== */
+
+    /* #region ====== PROPERTY ====== */
+        #property {
+            .carousel-props {
+                .carousel-cell {
+                    width: 350px;
+                    min-height: 400px;
+                    margin-right: 1.25rem;
+                }
+            }
+        }
+    /* #endregion ====================== */
+
+    /* #region ====== GALLERY ====== */
+        #gallery {
+            .gallery-track {
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 1.25rem;
+            }
+        }
+    /* #endregion ====================== */
 
 }
 
@@ -274,49 +384,17 @@
     /* #region ====== FOOTER ====== */
         footer {
             .top {
-                grid-template-columns: 1.5fr 1fr 1fr;
-                grid-template-rows: repeat(3, -webkit-max-content);
-                grid-template-rows: repeat(3, max-content);
+                grid-template-columns: 1.4fr 1fr 0.6fr 1fr;
+                grid-template-rows: -webkit-max-content;
+                grid-template-rows: max-content;
                 gap: 5%;
-            }
-            .profile {
-                flex-direction: row;
-                gap: 2rem;
 
-                p:nth-of-type(2) {
-                    font-size: .85rem;
+                .profile {
+                    grid-column: unset;
                 }
-            }
-            .logo {
-                min-width: 100px;
-                width: 100px;
-                padding-top: .5rem;
             }
             .social a:hover {
                 color: var(--secondary);
-            }
-
-            .mark {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                gap: 1rem;
-
-                .social {
-                    justify-content: flex-start;
-                    font-size: 1.5rem;
-                    margin-bottom: 0;
-                }
-                b {
-                    display: inline-block;
-                    position: relative;
-
-                    &::before {
-                        content: '-';
-                        display: inline-block;
-                        margin: 0 .5rem;
-                    }
-                }
             }
         }
     /* #endregion ====================== */
@@ -386,6 +464,7 @@
             .problem-wrap {
                 grid-template-columns: 0.75fr 1.25fr;
                 gap: 3rem;
+                margin-top: 4rem;
             }
             .feature {
                 padding: 2.5rem;
@@ -408,6 +487,8 @@
     /* #region ====== CONSEQUENCE ====== */
         #consequence {
             .head-sect {
+                margin-bottom: 4rem;
+
                 .title {
                     max-width: 650px;
                     margin-inline: auto;
@@ -430,6 +511,9 @@
 
     /* #region ====== COMPARISON ====== */
         #comparison {
+            .diff-table {
+                margin-top: 4rem;
+            }
             .title span:not(.focus) {
                 display: block;
             }
@@ -449,6 +533,95 @@
             }
             .cell.new {
                 padding: 1.75rem 2rem;
+            }
+        }
+    /* #endregion ====================== */
+
+    /* #region ====== SOLUTION & FLOW ====== */
+        #solution {
+            .wrapper-solution {
+                grid-template-columns: 0.85fr 1.15fr;
+                
+                .cr-secondary {
+                    margin-top: 1.25rem;
+                }
+                .item-title {
+                    font-size: var(--cr-font-size-xl);
+                }
+                .item-desc {
+                    font-size: var(--cr-font-size);
+                }
+            }
+
+            .wrapper-flow {
+                .flow {
+                    margin-top: 4rem;
+
+                    p:nth-of-type(1) {
+                        font-size: var(--cr-font-size-xl);
+                    }
+                    p:nth-of-type(2) {
+                        font-size: var(--cr-font-size);
+                    }
+                }
+            }
+        }
+    /* #endregion ====================== */
+    
+    /* #region ====== PROPERTY ====== */
+        #property {
+            .head-sect {
+                margin-bottom: 4rem;
+            }
+            .carousel-props {
+                .carousel-cell {
+                    min-width: 320px;
+                    max-width: 420px;
+                    margin-right: 1.5rem;
+                }
+            }
+            .property-item {
+                p:nth-child(1) {
+                    font-size: var(--cr-font-size-xl);
+                }
+                p:nth-child(3) {
+                    font-size: var(--cr-font-size);
+                }
+            }
+        }
+    /* #endregion ====================== */
+
+    /* #region ====== FAQ ====== */
+        #faq {
+            padding: var(--section-padding-y) var(--main-padding-x);
+
+            .wrapper {
+                display: grid;
+                grid-template-columns: 0.8fr 1.2fr;
+                align-items: start;
+                gap: 2rem;
+                margin: 0 auto;
+            }
+            .head-sect {
+                position: sticky;
+                top: 2rem; 
+                margin-top: 2rem;
+            }
+            .faq-q {
+                font-size: var(--cr-font-size-lg);
+            }
+            .faq-a p {
+                font-size: var(--cr-font-size);
+            }
+        }
+    /* #endregion ====================== */
+
+    /* #region ====== GALLERY ====== */
+        #gallery {
+            .gallery-track {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1.5rem;
+                margin-top: 4rem;
             }
         }
     /* #endregion ====================== */
@@ -478,6 +651,17 @@
         }
     /* #endregion ====================== */
 
+    /* #region ====== PROPERTY ====== */
+        #property {
+            .carousel-props {
+                .carousel-cell {
+                    max-width: 450px;
+                    margin-right: 2rem;
+                }
+            }
+        }
+    /* #endregion ====================== */
+            
 }
 
 /* ############## TV / ULTRAWIDE UP (1800px) ############## */
