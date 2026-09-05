@@ -144,13 +144,14 @@
         #comparison {
             .th {
                 font-size: var(--cr-font-size-xl);
-                padding: 1.5rem 4rem;
             }            
             .th.old {
                 text-align: right;
+                padding: 1.5rem 4rem 1.5rem 1.5rem;
             }
             .th.new {
                 text-align: left;
+                padding: 1.5rem 1.5rem 1.5rem 4rem;
             }
             .vs {
                 width: 3.25rem;
@@ -209,10 +210,16 @@
             .item {
                 flex-direction: column;
                 padding: 1.5rem;
+                background-color: hsl(from var(--primary) h s l / .5);
                 border: 1px solid hsl(from var(--sc-500) h s l / .65);
+                border-radius: 1rem;
+                transition: var(--anim);
             }
             .item:first-child {
                 border-top-width: 1px;
+            }
+            .item:hover {
+                background-color: var(--pr-700);
             }
         }
     /* #endregion ====================== */
@@ -243,7 +250,7 @@
                     left: 50%;
                     width: 100%;
                     height: 0;
-                    border-top: 2px dashed var(--border);
+                    border-top: 2px dashed var(--text-secondary);
                 }
                 .step:last-child::after {
                     display: none;
@@ -273,9 +280,8 @@
 
     /* #region ====== GALLERY ====== */
         #gallery {
-            .gallery-track {
-                grid-template-columns: 1fr 1fr 1fr;
-                gap: 1.25rem;
+            .running-img {
+                --card-w: 325px;
             }
         }
     /* #endregion ====================== */
@@ -407,7 +413,7 @@
     /* #region ====== MAIN HEADER ====== */
         #mainHeader {
             &::before {
-                background: radial-gradient(circle at 90% 80%, hsl(from var(--primary) h s l / .35), var(--surface-0) 50%);
+                background: radial-gradient(circle at 90% 80%, hsl(from var(--primary) h s l / .35), transparent 50%);
             }
             
             .hero {
@@ -535,6 +541,12 @@
                     filter: blur(1px);
                 }
             }
+
+            .polka {
+                right: auto;
+                left: 0;
+                top: 10%;
+            }
         }
     /* #endregion ====================== */
 
@@ -562,14 +574,16 @@
             }
             .diff-row {
                 grid-template-columns: 1fr 150px 1fr;
-                transition: var(--anim);
-
-                &:hover {
-                    background: var(--sc-100);
-                }
+                transition: var(--anim);                
+            }
+            .diff-row:hover {
+                background: var(--sc-100);
             }
             .cell.old {
                 padding: 1.75rem 2rem;
+            }
+            .diff-row:hover .cell.old {
+                color: var(--static-black);
             }
             .cell.new {
                 padding: 1.75rem 2rem;
@@ -580,7 +594,8 @@
     /* #region ====== SOLUTION ====== */
         #solution {
             .wrapper {
-                grid-template-columns: 0.85fr 1.15fr;                
+                grid-template-columns: 0.85fr 1.15fr;
+                gap: 2rem;             
             }
             .cr-secondary {
                 margin-top: 1.25rem;
@@ -596,6 +611,9 @@
     
     /* #region ====== FLOW ====== */
         #flow {
+            .desc {
+                max-width: 70%;
+            }
             .flow-wrap {
                 margin-top: 4rem;
 
@@ -664,15 +682,27 @@
             .faq-a p {
                 font-size: var(--cr-font-size);
             }
+
+            .net {
+                --pos: left 65%;
+                --size: 250px;
+                --sqr: 40px;
+
+                top: auto;
+                left: 0;
+                bottom: 20%;
+                right: auto;
+            }
         }
     /* #endregion ====================== */
 
     /* #region ====== GALLERY ====== */
         #gallery {
-            .gallery-track {
-                grid-template-columns: repeat(4, 1fr);
-                gap: 1.5rem;
-                margin-top: 3rem;
+            .gallery-layout {
+                margin-top: 4rem;
+            }
+            .running-img {
+                --card-w: 450px;
             }
         }
     /* #endregion ====================== */
